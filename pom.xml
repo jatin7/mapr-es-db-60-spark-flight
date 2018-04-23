@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>mapr</groupId>
     <artifactId>mapr-es-db-60-spark-flight</artifactId>
-    <version>1.0</version>
+    <version>6.0</version>
     <name>mapr-es-db-60-spark-flight</name>
     <description></description>
     <inceptionYear>2017</inceptionYear>
