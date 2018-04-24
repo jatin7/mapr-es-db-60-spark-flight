@@ -19,7 +19,7 @@ public class MsgProducer {
 
         // Set the default stream and topic to publish to.
       //  String topic = "/user/user01/stream:flights";
-        String topic = "/mapr/maprdemo.mapr.io/apps/stream:flights";
+        String topic = "/apps/stream:flights";
 
         String fileName =  "./data/flights20170304.json";
 

@@ -65,7 +65,7 @@ maprcli stream topic delete -path /apps/stream -topic flights
 maprcli stream topic delete -path /apps/stream -topic flightp
 
 - Create the MapR-DB table:
-maprcli table create -path /mapr/maprdemo.mapr.io/apps/flights -tabletype json -defaultreadperm p -defaultwriteperm p
+maprcli table create -path /mapr/demo.mapr.com/apps/flights -tabletype json -defaultreadperm p -defaultwriteperm p
 ____________________________________________________________________
 
 
@@ -73,13 +73,13 @@ Step 2: Publish flight data to the flights topic
 
 Run the MapR Event Streams Java producer to produce messages with the topic and data file arguments:
 
-java -cp mapr-es-db-60-spark-flight-1.0.jar:`mapr classpath` streams.MsgProducer /user/user01/stream:flights /user/user01/data/flights20170102.json
+java -cp mapr-es-db-60-spark-flight-1.0.jar:`mapr classpath` streams.MsgProducer /apps/stream:flights /apps/data/flights20170102.json
 
 Step 3: Consume from flights topic, enrich with Model predictions, publish to flightp topic 
 
 Run the Spark Consumer Producer (in separate consoles if you want to run at the same time) run the spark consumer with the topic to read from and write to:
 
-spark-submit --class stream.SparkKafkaConsumerProducer --master local[2] spark-ml-flightdelay-1.0-jar-with-dependencies.jar  /user/user01/stream:flights /user/user01/stream:flightp
+spark-submit --class stream.SparkKafkaConsumerProducer --master local[2] spark-ml-flightdelay-1.0-jar-with-dependencies.jar  /apps/stream:flights /apps/stream:flightp
 
 ____________________________________________________________________
 

@@ -21,7 +21,7 @@ public class OJAI_SimpleQuery {
 
     public static void main(String[] args) {
         //Full path including namespace /mapr/<cluster-name>/apps/
-        String tableName = "/mapr/maprdemo.mapr.io/apps/flights";
+        String tableName = "/apps/flights";
         if (args.length == 1) {
             tableName = args[0];
 
